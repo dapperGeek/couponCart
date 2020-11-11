@@ -1,0 +1,20 @@
+.pad10 {
+    padding: 10px;
+}
+.store_container {
+    padding: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.store_img {
+    max-width: 80%;
+    border-radius: 4px;
+}
+table tbody tr td .cart_thumbs {
+    height:100px;
+    border-radius: 2px;
+}
+.cart_table {
+    width: 60%;
+    margin-left: 40px;
+}
