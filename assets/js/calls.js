@@ -1,10 +1,9 @@
     let cartTotal = 0;
 
+    // add items to the shopping cart, checks if item already exists in the cart
     function addToCart(val) {
         let id = val[0];
         let price = val[1];
-        cartTotal += price ;
-        console.log('The price is : ' + val[1] + ' : New Total is ' + cartTotal + ' : ID is ' + id);
 
         $.ajax({
             type: 'POST',
@@ -14,8 +13,11 @@
                 'id' : id
             },
             success: function (data) {
-                // let selected = response['id'];
+                // console.log(data);
+                cartTotal = data['added'] === 1 ? cartTotal + price : cartTotal;
+                $('#cart-link').html('View items in cart.');
                 console.log(data);
+                alert('Cart has been updated');
             }
         })
     }

@@ -14,8 +14,7 @@
                     </thead>
                     <tbody>
                     <?php
-                        print_r($_SESSION['cart']);
-
+//                        print_r($_SESSION['cart']);
                         $cartTotal = 0;
                         while ($item = $myCart->fetch_assoc()){
                             $cartTotal += $item['price'];

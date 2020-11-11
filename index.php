@@ -5,7 +5,7 @@
 ?>
     <div class="row col-md-12">
         <div class="row col-md-12" style="margin-right: auto; margin-left: auto">
-            <a href="cart.php" title="Go to cart">Go to cart</a>
+            <a id="cart-link" href="cart.php" title="Go to cart">Go to cart</a>
         </div>
 
         <div class="row col-md-10" style="margin-left: auto; margin-right: auto">

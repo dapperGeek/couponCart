@@ -8,6 +8,7 @@
         $cart = $_SESSION['cart'];
         $id = $_POST['id'];
         $response = '';
+        $added = false;
 
         if ($cart != array() && in_array($id, $cart)){
             $response = 'Item already in your cart';
@@ -15,12 +16,14 @@
         else{
             array_push($_SESSION['cart'], $id);
             $response = 'Item added to cart';
+            $added = true;
         }
     //        $data = array();
         $data['id'] = $_POST['id'];
         $data['response'] = $response;
         $data['cart'] = $_SESSION['cart'];
         $data['size'] = sizeof($_SESSION['cart']);
+        $data['added'] = $added;
         print_r($data);
     }
 
