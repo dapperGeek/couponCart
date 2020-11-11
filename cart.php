@@ -28,7 +28,7 @@
                                     <input type="hidden" name="product[]" value="<?php echo $item['id'] ?>">
                                 </td>
                                 <td>
-                                    <?php echo $item['price'] ?>
+                                    <?php echo '$' . $item['price'] ?>
                                     <input" type="hidden" name="price[]" value="<?php echo $item['price'] ?>">
                                 </td>
                             </tr>
@@ -46,7 +46,7 @@
                         <tr>
                             <td colspan="2"> TOTAL </td>
                             <td>
-                                <input style="border-width: 0" readonly name="cart_total" id="cart_total" value="<?php echo $cartTotal; ?>">
+                                <input style="border-width: 0" readonly name="cart_total" id="cart_total" value="<?php echo '$' . $cartTotal ; ?>">
                             </td>
                         </tr>
                     </tbody>
