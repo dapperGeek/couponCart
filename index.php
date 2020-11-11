@@ -20,7 +20,7 @@
                             <span><?php echo $item['product'] ?></span>
                         </div>
                         <div>
-                            <span><?php echo $item['price'] ?></span>
+                            <span><?php echo '$' . $item['price'] ?></span>
                         </div>
                         <div>
                             <a href="#" class="btn btn-secondary" onclick="addToCart([<?php echo $item['id'] . ',' . $item['price']; ?>])">
