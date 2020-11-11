@@ -14,6 +14,8 @@
                     </thead>
                     <tbody>
                     <?php
+                        print_r($_SESSION['cart']);
+
                         $cartTotal = 0;
                         while ($item = $myCart->fetch_assoc()){
                             $cartTotal += $item['price'];
@@ -28,7 +30,7 @@
                                 </td>
                                 <td>
                                     <?php echo $item['price'] ?>
-                                    <input onchange="" type="hidden" name="price[]" value="<?php echo $item['price'] ?>">
+                                    <input" type="hidden" name="price[]" value="<?php echo $item['price'] ?>">
                                 </td>
                             </tr>
                             <?php
@@ -38,13 +40,15 @@
                         <tr>
                             <td colspan="2"> USE COUPON CODE</td>
                             <td>
-                                <input name="coupon" type="text">
+                                <input onchange="validateCoupon([this.value, <?php echo sizeof($_SESSION['cart']). ',' . $cartTotal ?>])" name="coupon" type="text">
                             </td>
                         </tr>
 
                         <tr>
-                            <td colspan="2"></td>
-                            <td> <?php echo $cartTotal; ?></td>
+                            <td colspan="2"> TOTAL </td>
+                            <td>
+                                <input style="border-width: 0" readonly name="cart_total" id="cart_total" value="<?php echo $cartTotal; ?>">
+                            </td>
                         </tr>
                     </tbody>
                 </table>
